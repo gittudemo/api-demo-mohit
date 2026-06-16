@@ -1,7 +1,12 @@
 <h3>User list</h3>
 
-<ul>
+<!-- <ul>
   @for (user of users; track user.id) {
+    <li>{{ user.name }} - {{ user.email }}</li>
+  }
+</ul> -->
+<ul>
+  @for (user of users(); track user.id) {
     <li>{{ user.name }} - {{ user.email }}</li>
   }
 </ul>
