@@ -14,7 +14,7 @@
 <h3>users for json-server</h3>
 <ul>
   @for (user of users(); track $index) {
-    <li>{{ user.name }}</li>
+    <li>{{ user.name }} - {{ user.email }} - {{ user.isActive }}</li>
     <li>{{ user.email }}</li>
   }
 </ul>

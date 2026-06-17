@@ -1,15 +1,3 @@
 {
-  "users": [
-    { "id": "1", "name": "Priya", "email": "priya@gmail.com" },
-    { "id": "2", "name": "Shakeel", "email": "Shakeel@gmail.com" },
-    { "id": "3", "name": "Nanu", "email": "Nanu@gmail.com" },
-    { "id": "3", "name": "Babu", "email": "Babu@gmail.com" }
-  ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "users": [{ "id": "1", "name": "Priya", "email": "priya@gmail.com", "isActive": true }]
 }

@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { ApiService } from './services/api.service';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { UserService } from './services/user-service';
+import { User } from './models/user';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,5 @@ export class App {
 
   userService = inject(UserService);
 
-  users : any = toSignal(this.userService.getUsers())
-  
+  users = toSignal<User[]>(this.userService.getUsers());
 }
