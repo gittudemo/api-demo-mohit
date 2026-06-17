@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ApiService } from './services/api.service';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
+import { UserService } from './services/user-service';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,8 @@ import { toObservable, toSignal } from '@angular/core/rxjs-interop';
   styleUrl: './app.css',
 })
 export class App {
-  userService = inject(ApiService);
-  users = toSignal(this.userService.getUsers(), { initialValue: [] });
+  //userService = inject(ApiService);
+  //users = toSignal(this.userService.getUsers(), { initialValue: [] });
 
   // constructor(private userService: ApiService) {}
 
@@ -22,4 +23,9 @@ export class App {
   //     console.log(this.users);
   //   });
   // }
+
+  userService = inject(UserService);
+
+  users : any = toSignal(this.userService.getUsers())
+  
 }
