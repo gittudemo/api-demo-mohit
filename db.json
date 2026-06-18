@@ -35,6 +35,12 @@
       "email": "qad@h",
       "isActive": true,
       "id": "xRPBoqbdiuw"
+    },
+    {
+      "name": "amit",
+      "email": "test@gmail.com",
+      "isActive": true,
+      "id": "CJe9yTtXX4M"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
