@@ -1,3 +1,41 @@
 {
-  "users": [{ "id": "1", "name": "Priya", "email": "priya@gmail.com", "isActive": true }]
+  "users": [
+    {
+      "id": "1",
+      "name": "Priya",
+      "email": "priya@gmail.com",
+      "isActive": true
+    },
+    {
+      "name": "amit",
+      "email": "amit@gmail.com",
+      "isActive": true,
+      "id": "Pbfvz0KSWg4"
+    },
+    {
+      "name": "amit",
+      "email": "amit@gmail.com",
+      "isActive": true,
+      "id": "eke9Hrqfvdw"
+    },
+    {
+      "name": "amit",
+      "email": "amit@gmail.com",
+      "isActive": true,
+      "id": "C47zlp2loOw"
+    },
+    {
+      "name": "ravi",
+      "email": "eavi@gmail.com",
+      "isActive": true,
+      "id": "NhqHnNzYzX4"
+    },
+    {
+      "name": "qad",
+      "email": "qad@h",
+      "isActive": true,
+      "id": "xRPBoqbdiuw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

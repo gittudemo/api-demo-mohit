@@ -24,8 +24,38 @@ export class App {
   //     console.log(this.users);
   //   });
   // }
+  users = signal<User[]>([]);
+  name = signal<string>('');
+  email = signal<string>('');
 
   userService = inject(UserService);
 
-  users = toSignal<User[]>(this.userService.getUsers());
+  // users = toSignal<User[]>(this.userService.getUsers());
+
+  ngOnInit() {
+    // this.userService.addUser().subscribe((data)=> {
+    //   this.users.set(data);
+    // });
+    this.loadUsers();
+  }
+
+  loadUsers() {
+    this.userService.getUsers().subscribe((data) => {
+      this.users.set(data);
+    });
+  }
+  submitForm() {
+    const payload: User = {
+      name: this.name(),
+      email: this.email(),
+      isActive: true,
+    };
+
+    this.userService.addUser(payload).subscribe((data) => {
+      alert('user added successfully');
+      this.loadUsers();
+      this.name.set('');
+      this.email.set('');
+    });
+  }
 }
